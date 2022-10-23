@@ -8,32 +8,14 @@
  * @format
  */
 
-import React, {type PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import React from 'react';
+import {Text, View} from 'react-native';
+import Home from './screens/Home';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {NavigationContainer} from '@react-navigation/native';
 
-function Home() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
+const Tab = createBottomTabNavigator();
 
 function Discover() {
   return (
@@ -63,8 +45,41 @@ function Profile() {
 
 export default function App() {
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Home!</Text>
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{
+            tabBarLabel: 'Home',
+            headerShown: false,
+          }}
+        />
+        <Tab.Screen
+          name="Discover"
+          component={Discover}
+          options={{
+            tabBarLabel: 'Discover',
+            headerShown: false,
+          }}
+        />
+        <Tab.Screen
+          name="Chat"
+          component={Chat}
+          options={{
+            tabBarLabel: 'Chat',
+            headerShown: false,
+          }}
+        />
+        <Tab.Screen
+          name="Profile"
+          component={Profile}
+          options={{
+            tabBarLabel: 'Profile',
+            headerShown: false,
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
