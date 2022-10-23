@@ -35,20 +35,20 @@ const styles = StyleSheet.create({
   },
 
   chatBox: {
-    width:350,
+    width:300,
     height:60,
     backgroundColor: '#fce0c7',
-    marginLeft:-20,
-    marginTop:10,
+    marginLeft: 5,
+    marginTop:20,
     marginBottom:5,
     borderRadius:15,
     flexDirection: "row",
     flexWrap: "wrap",
-    borderColor: "#000000",
-    shadowOpacity:0.3,
-    shadowRadius:16.00,
-    elevation:24,
-    shadowOffset:{height:4,width:0},
+    borderColor: "#000",
+    shadowOpacity: 0.6,
+    shadowRadius: 3.0,
+    // elevation: 24,
+    shadowOffset: {height: 6, width: 0},
   },
 
   name: {
@@ -78,12 +78,23 @@ const styles = StyleSheet.create({
   },
 
   pronouns: {
-    textAlign: "right",
-    marginLeft: 25,
+    //textAlign: "right",
+    //marginLeft: 25,
     marginTop: 19,
     fontSize: 9,
     fontWeight: "300",
-    paddingRight: 5,
+    //paddingRight: 5,
+  },
+
+  search: {
+    width: 350,
+    height: 40,
+    borderColor: '#989BA5',
+    borderWidth: 1,
+    borderRadius: 20,
+    marginLeft: -15,
+    paddingLeft: 15,
+    color: '#808080',
   },
 });
 

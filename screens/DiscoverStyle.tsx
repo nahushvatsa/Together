@@ -50,12 +50,12 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'left',
-    marginLeft: -20,
+    marginLeft: -10,
     fontFamily: 'Arial',
     marginTop: 13,
   },
 
-  leaders: {
+  photos: {
     marginTop: 10,
     marginLeft: 10,
     width: 45,
@@ -63,6 +63,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFF',
     borderRadius: 200,
   },
+
+  leaders: {
+    marginBottom: 10,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    marginLeft:-18,
+  },
+
   rectangleShapeView: {
     marginTop: 10,
     marginLeft: 15,
@@ -198,6 +206,36 @@ const styles = StyleSheet.create({
     height: 50,
     backgroundColor: '#FFF',
     borderRadius: 200,
+  },
+
+  trendingHolder: {
+    width: 600,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    height: 13,
+    marginBottom: 40,
+  },
+
+  trending: {
+    height: 23,
+    width: 98,
+    marginTop: 15,
+    marginLeft: -10,
+    marginRight: 30,
+    backgroundColor: '#f0f2f6',
+    borderRadius: 20,
+    borderWidth:1.5,
+    borderColor: "#AC5E30"
+  },
+
+  trendingText: {
+    fontSize: 15,
+    textAlign: 'center',
+    marginTop: 1,
+    marginLeft: 2,
+    marginRight: 4,
+    fontWeight: '600',
+    color: "#6f8ba4",
   },
 });
 
