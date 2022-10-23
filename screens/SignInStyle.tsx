@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: colors.light,
-    borderRadius: 12,
+    borderRadius: 2,
     width: width * 0.8,
     alignSelf: 'center',
     paddingHorizontal: width * 0.05,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.blue,
     color: primary,
     marginTop: height * 0.015,
-    borderRadius: height * 0.05,
+    borderRadius: height * 0.01,
     width: width * 0.9,
     alignSelf: 'center',
   },
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   signUpButton: {
     backgroundColor: colors.blue,
     color: primary,
-    borderRadius: height * 0.03,
+    borderRadius: height * 0.01,
     marginTop: -height * 0.01,
     width: width * 0.3,
     marginLeft: width * 0.05,

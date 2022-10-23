@@ -1,15 +1,11 @@
-import {
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
 import React, {useState} from 'react';
+import {Text, TextInput, TouchableOpacity, View} from 'react-native';
 import {styles} from './SignInStyle';
 import colors from '../config/colors';
 import auth from '@react-native-firebase/auth';
 
-export default function SignIn() {
+// @ts-ignore
+export default function SignIn({navigation}) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
@@ -18,7 +14,7 @@ export default function SignIn() {
     auth()
       .signInWithEmailAndPassword(email.toString(), password.toString())
       .then(() => {
-        console.log('User account signed in!');
+        navigation.navigate('Profile');
       })
       .catch(error => {
         console.log(error);
@@ -58,10 +54,18 @@ export default function SignIn() {
 
           <TouchableOpacity
             style={styles.forgotPwd}
-            // onPress={() => setModalVisible(true)}
           >
             <Text style={styles.forgotPwd}>Forgot Password?</Text>
           </TouchableOpacity>
+
+          <View style={styles.noAccountView}>
+            <Text style={styles.noAccountText}>Don't have an account?</Text>
+            <TouchableOpacity
+              style={styles.signUpButton}
+              onPress={() => navigation.navigate('Sign Up')}>
+              <Text style={styles.signUpButtonText}>Sign Up</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </View>
