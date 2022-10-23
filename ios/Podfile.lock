@@ -9,8 +9,16 @@ PODS:
     - React-Core (= 0.70.3)
     - React-jsi (= 0.70.3)
     - ReactCommon/turbomodule/core (= 0.70.3)
+  - Firebase/Auth (10.0.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (~> 10.0.0)
   - Firebase/CoreOnly (10.0.0):
     - FirebaseCore (= 10.0.0)
+  - FirebaseAuth (10.0.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GTMSessionFetcher/Core (~> 2.1)
   - FirebaseCore (10.0.0):
     - FirebaseCoreInternal (~> 10.0)
     - GoogleUtilities/Environment (~> 7.8)
@@ -19,11 +27,22 @@ PODS:
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
   - fmt (6.2.1)
   - glog (0.3.5)
+  - GoogleUtilities/AppDelegateSwizzler (7.8.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
   - GoogleUtilities/Environment (7.8.0):
     - PromisesObjC (< 3.0, >= 1.2)
   - GoogleUtilities/Logger (7.8.0):
     - GoogleUtilities/Environment
+  - GoogleUtilities/Network (7.8.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
   - "GoogleUtilities/NSData+zlib (7.8.0)"
+  - GoogleUtilities/Reachability (7.8.0):
+    - GoogleUtilities/Logger
+  - GTMSessionFetcher/Core (2.1.0)
   - hermes-engine (0.70.3)
   - libevent (2.1.12)
   - PromisesObjC (2.1.1)
@@ -330,6 +349,10 @@ PODS:
   - RNFBApp (16.1.1):
     - Firebase/CoreOnly (= 10.0.0)
     - React-Core
+  - RNFBAuth (16.1.1):
+    - Firebase/Auth (= 10.0.0)
+    - React-Core
+    - RNFBApp
   - RNGestureHandler (2.8.0):
     - React-Core
   - RNReanimated (2.11.0):
@@ -403,6 +426,7 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNFBApp (from `../node_modules/@react-native-firebase/app`)"
+  - "RNFBAuth (from `../node_modules/@react-native-firebase/auth`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
@@ -411,10 +435,12 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Firebase
+    - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreInternal
     - fmt
     - GoogleUtilities
+    - GTMSessionFetcher
     - libevent
     - PromisesObjC
 
@@ -491,6 +517,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/masked-view"
   RNFBApp:
     :path: "../node_modules/@react-native-firebase/app"
+  RNFBAuth:
+    :path: "../node_modules/@react-native-firebase/auth"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNReanimated:
@@ -506,11 +534,13 @@ SPEC CHECKSUMS:
   FBLazyVector: 3b313c3fb52b597f7a9b430798e6367d2b9f07e5
   FBReactNativeSpec: 99a7ecb7e9665d96f2fea706b0844e2f3117f381
   Firebase: 1b810f3d0c0532e27a48f1961f8c0400a668a2cf
+  FirebaseAuth: 493382cf533cc45e2862b00e9aa4cfe4c98daf71
   FirebaseCore: 97f48a3a567a72b8d4daa0f03c3aadb78df4e995
   FirebaseCoreInternal: 5eb3960335da5ea30115d57d39db6988c4ad06f3
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   GoogleUtilities: 1d20a6ad97ef46f67bbdec158ce00563a671ebb7
+  GTMSessionFetcher: ffbb25ec00ebcb5201adab0a56d808f6f1902d9f
   hermes-engine: bb344d89a0d14c2c91ad357480a79698bb80e186
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
@@ -544,6 +574,7 @@ SPEC CHECKSUMS:
   ReactCommon: 01064177e66d652192c661de899b1076da962fd9
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
   RNFBApp: ffbdeba57ae0b5556305c2496da19f601016219b
+  RNFBAuth: 0db50ec4731130eeaed12216b8f08591466bd95b
   RNGestureHandler: 62232ba8f562f7dea5ba1b3383494eb5bf97a4d3
   RNReanimated: 82596c2a0df1f730460bd657c81896a58febcd54
   RNScreens: 34cc502acf1b916c582c60003dc3089fa01dc66d
