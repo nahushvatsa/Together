@@ -4,14 +4,13 @@ Together can make an ever larger community impact when used by companies! Many b
 
 With Together, we hope to empower underrepresented communities by strengthening their numbers and making communication accessible. 
 
-## Requirements
+## :arrow_down: Installation
+* Clone repo
+* In root directory, ```npm install```
+* In iOS directory, ```pod install```
+* In root directory, run ```react-native run-ios``` for ios app OR ```react-native run-android``` for android app
 
-## Installation
-
-## Demo
-
-## Future Updates
-
-
-
-
+## :fast_forward: What's next for Together
+* Donation feature so that marginalized communities grow financially
+* Scheduling assistance embedded into the application
+* Ways for members to share their experiences with the organization
