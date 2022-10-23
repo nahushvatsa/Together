@@ -98,7 +98,7 @@ export default function UserProfile({navigation}) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Sign Up</Text>
+      <Text style={styles.title}>Profile</Text>
       <View style={styles.overlay}>
         <Image
           source={{
