@@ -23,7 +23,7 @@ export default function SignIn({navigation}) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Log In</Text>
+      <Text style={styles.title}>Sign In</Text>
       <View style={styles.overlay}>
         <View style={styles.centeredView}>
           <TextInput

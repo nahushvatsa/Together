@@ -98,7 +98,7 @@ export default function UserProfile({navigation}) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Sign Up</Text>
+      <Text style={styles.title}>Profile</Text>
       <View style={styles.overlay}>
         <Image
           source={{
@@ -108,7 +108,10 @@ export default function UserProfile({navigation}) {
         />
 
         <View style={styles.spaceBetweenRow}>
-          <Text style={styles.title}>Shreshth Kharbanda</Text>
+          <Text style={styles.titleName}>Shreshth Kharbanda</Text>
+        </View>
+        <View style={styles.spaceBetweenRow}>
+          <Text style={{fontSize: 15, fontWeight: "bold", marginLeft: width * 0.27,}}>(He/Him/His) {"\n"}</Text>
         </View>
 
         <View style={styles.row}>
@@ -120,6 +123,7 @@ export default function UserProfile({navigation}) {
                 backgroundColor: '#e39364',
                 borderRadius: 20,
                 paddingHorizontal: 20,
+                marginRight: 25,
               }}>
               <Text style={styles.BannerType}>Person of Color</Text>
             </View>
@@ -130,7 +134,7 @@ export default function UserProfile({navigation}) {
         </View>
 
         <Text style={styles.subTitle}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          {"\n"}Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Text>
       </View>

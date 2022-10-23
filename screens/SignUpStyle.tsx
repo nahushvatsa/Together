@@ -2,13 +2,13 @@ import {StyleSheet} from 'react-native';
 import {Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
 import colors from '../config/colors';
-const primary = colors.white;
+const primary = "#fce0c7";
 const secondary = colors.black;
 const inputColor = colors.gray;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.blue,
+    backgroundColor: "#AC5E30",
     flex: 1,
     flexDirection: 'column',
   },
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: primary,
     marginTop: height * 0.06,
-    fontWeight: '200',
+    fontWeight: 'bold',
     textAlign: 'center',
   },
   subTitle: {
@@ -46,13 +46,13 @@ const styles = StyleSheet.create({
   },
   itemText: {
     fontSize: 15,
-    color: colors.blue,
+    color: "#000",
     fontWeight: '400',
     textAlign: 'center',
   },
   namesInput: {
     borderWidth: 1,
-    borderColor: colors.light,
+    borderColor: "#AC5E30",
     borderRadius: 3,
     width: width * 0.4,
     paddingHorizontal: width * 0.05,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   pronounsInput: {
     borderWidth: 1,
-    borderColor: colors.light,
+    borderColor: "#AC5E30",
     borderRadius: 3,
     width: width * 0.85,
     alignSelf: 'center',
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
   },
   pronounsInputItem: {
     borderWidth: 1,
-    borderColor: colors.blue,
+    borderColor: "#AC5E30",
     borderRadius: 3,
     width: width * 0.85,
     alignSelf: 'center',
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: colors.light,
+    borderColor: "#AC5E30",
     borderRadius: 3,
     width: width * 0.85,
     alignSelf: 'center',
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   item: {
-    color: colors.blue,
+    color: "#AC5E30",
   },
   rolePrompt: {
     fontSize: 18,
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   signUpButton: {
-    backgroundColor: colors.blue,
+    backgroundColor: "#AC5E30",
     color: primary,
     borderRadius: height * 0.03,
     marginTop: -height * 0.01,
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
     marginLeft: width * 0.05,
   },
   signInButton: {
-    backgroundColor: colors.blue,
+    backgroundColor: "#AC5E30",
     color: primary,
     marginTop: height * 0.015,
     borderRadius: height * 0.05,
@@ -167,13 +167,13 @@ const styles = StyleSheet.create({
   },
   noAccountText: {
     fontSize: 18,
-    color: inputColor,
+    color: "#000",
   },
   signUpButtonText: {
     fontSize: 12,
     color: primary,
     margin: height * 0.015,
-    fontWeight: '400',
+    fontWeight: 'bold',
     textAlign: 'center',
   },
   rememberMeView: {
@@ -292,7 +292,7 @@ const styles = StyleSheet.create({
     width: width * 0.25,
     borderRadius: width * 0.13,
     borderWidth: width * 0.002,
-    borderColor: colors.blue,
+    borderColor: "#AC5E30",
     marginTop: height * 0.01,
   },
   avatar: {
@@ -309,7 +309,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   modalResetPass: {
-    backgroundColor: colors.blue,
+    borderColor: "#AC5E30",
     color: primary,
     borderRadius: height * 0.08,
     marginTop: height * 0.03,

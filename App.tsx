@@ -14,6 +14,7 @@ import Home from './screens/Home';
 import UserProfile from './screens/UserProfile';
 import SignIn from './screens/SignIn';
 import Discover from './screens/Discover';
+import Chat from "./screens/Chat";
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
@@ -22,13 +23,13 @@ import SignUp from './screens/SignUp';
 
 const Tab = createBottomTabNavigator();
 
-function Chat() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+// function Chat() {
+//   return (
+//     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+//       <Text>Settings!</Text>
+//     </View>
+//   );
+// }
 
 const AuthStack = createStackNavigator();
 // const HomeStack = createStackNavigator();
