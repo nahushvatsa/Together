@@ -11,22 +11,65 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import Home from './screens/Home';
+import UserProfile from './screens/UserProfile';
 import SignIn from './screens/SignIn';
 import Discover from './screens/Discover';
-import Chat from './screens/Chat';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import SignUp from './screens/SignUp';
 
 const Tab = createBottomTabNavigator();
 
-// function Profile() {
-//   return (
-//     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-//       <Text>Settings!</Text>
-//     </View>
-//   );
-// }
+function Chat() {
+  return (
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}
+
+const AuthStack = createStackNavigator();
+// const HomeStack = createStackNavigator();
+// const ChatStack = createStackNavigator();
+// const CalendarStack = createStackNavigator();
+// const SearchStack = createStackNavigator();
+
+function AuthStackScreen() {
+  return (
+    // user.size == 0 ? (
+    <AuthStack.Navigator>
+      <AuthStack.Screen
+        name="Sign In"
+        component={SignIn}
+        options={{
+          tabBarLabel: 'Login',
+          headerShown: false,
+          gesturesEnabled: false,
+        }}
+      />
+      <AuthStack.Screen
+        name="Sign Up"
+        component={SignUp}
+        options={{
+          tabBarLabel: 'Sign Up',
+          headerShown: false,
+          gesturesEnabled: false,
+        }}
+      />
+      <AuthStack.Screen
+        name="User Profile"
+        component={UserProfile}
+        options={{
+          tabBarLabel: 'User Profile',
+          headerShown: false,
+          gesturesEnabled: false,
+        }}
+      />
+    </AuthStack.Navigator>
+  );
+}
 
 // const Tab = createBottomTabNavigator();
 
@@ -60,7 +103,7 @@ export default function App() {
         />
         <Tab.Screen
           name="Profile"
-          component={SignIn}
+          component={AuthStackScreen}
           options={{
             tabBarLabel: 'Profile',
             headerShown: false,

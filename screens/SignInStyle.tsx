@@ -2,13 +2,13 @@ import {StyleSheet} from 'react-native';
 import {Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
 import colors from '../config/colors';
-const primary = '#fce0c7';
+const primary = colors.white;
 const secondary = colors.black;
 const inputColor = colors.gray;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#AC5E30',
+    backgroundColor: colors.blue,
     flex: 1,
     flexDirection: 'column',
   },
@@ -25,16 +25,16 @@ const styles = StyleSheet.create({
     paddingTop: height * 0.02,
   },
   title: {
-    fontSize: 35,
+    fontSize: 30,
     color: primary,
     marginTop: height * 0.06,
-    fontWeight: '600',
+    fontWeight: '200',
     textAlign: 'center',
   },
   input: {
     borderWidth: 1,
-    borderColor: colors.gray,
-    borderRadius: 12,
+    borderColor: colors.light,
+    borderRadius: 2,
     width: width * 0.8,
     alignSelf: 'center',
     paddingHorizontal: width * 0.05,
@@ -44,25 +44,25 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   forgotPwd: {
-    color: colors.black,
+    color: colors.blue,
     marginVertical: 5,
     fontSize: 12,
     fontWeight: '700',
     alignSelf: 'flex-end',
   },
   signInButton: {
-    backgroundColor: '#AC5E30',
+    backgroundColor: colors.blue,
     color: primary,
     marginTop: height * 0.015,
-    borderRadius: height * 0.05,
+    borderRadius: height * 0.01,
     width: width * 0.9,
     alignSelf: 'center',
   },
   signInButtonText: {
-    fontSize: 18,
+    fontSize: 15,
     color: primary,
     margin: height * 0.025,
-    fontWeight: '700',
+    fontWeight: '400',
     textAlign: 'center',
   },
   noAccountView: {
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   signUpButton: {
     backgroundColor: colors.blue,
     color: primary,
-    borderRadius: height * 0.03,
+    borderRadius: height * 0.01,
     marginTop: -height * 0.01,
     width: width * 0.3,
     marginLeft: width * 0.05,
