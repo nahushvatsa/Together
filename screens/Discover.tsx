@@ -1,14 +1,15 @@
-import {Dimensions, Text, View} from 'react-native';
+import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
+
 export default function Discover() {
   return (
     <View
       style={{
-        backgroundColor: '#03045E',
+        backgroundColor: '#AC5E30',
         flex: 1,
         flexDirection: 'column',
         paddingTop: height * 0.06,
@@ -16,9 +17,9 @@ export default function Discover() {
       <Text
         style={{
           flex: 1,
-          color: '#FFF',
-          fontSize: 30,
-          fontWeight: '400',
+          color: '#fce0c7',
+          fontSize: 35,
+          fontWeight: '600',
           textAlign: 'center',
         }}>
         Discover
@@ -29,7 +30,7 @@ export default function Discover() {
           position: 'absolute',
           left: 0,
           marginTop: height * 0.12,
-          backgroundColor: '#FFF',
+          backgroundColor: '#fce0c7',
           borderRadius: width * 0.1,
           height: height,
           width: width,

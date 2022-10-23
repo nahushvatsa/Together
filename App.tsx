@@ -13,19 +13,12 @@ import {Text, View} from 'react-native';
 import Home from './screens/Home';
 import SignIn from './screens/SignIn';
 import Discover from './screens/Discover';
+import Chat from './screens/Chat';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
-
-function Chat() {
-  return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
 
 function Profile() {
   return (

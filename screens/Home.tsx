@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <View
       style={{
-        backgroundColor: '#03045E',
+        backgroundColor: '#AC5E30',
         flex: 1,
         flexDirection: 'column',
         paddingTop: height * 0.06,
@@ -16,9 +16,9 @@ export default function Home() {
       <Text
         style={{
           flex: 1,
-          color: '#FFF',
-          fontSize: 30,
-          fontWeight: '400',
+          color: '#fce0c7',
+          fontSize: 35,
+          fontWeight: '600',
           textAlign: 'center',
         }}>
         Home
@@ -29,7 +29,7 @@ export default function Home() {
           position: 'absolute',
           left: 0,
           marginTop: height * 0.12,
-          backgroundColor: '#FFF',
+          backgroundColor: '#fce0c7',
           borderRadius: width * 0.1,
           height: height,
           width: width,
