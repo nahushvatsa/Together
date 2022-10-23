@@ -14,9 +14,9 @@ export default function Chat() {
                 <View style={styles.chatBox}>
                     <View style={styles.chatIcon}></View>
                     <View style={{marginRight:30}}><Text style={styles.name}>Sid Varanasi</Text>
-                    <Text style={styles.message}>This is a message preview!</Text>
-                </View>
-                <Text style={styles.pronouns}>(He/Him/His)</Text>
+                        <Text style={styles.message}>This is a message preview!</Text>
+                    </View>
+                    <Text style={styles.pronouns}>(He/Him/His)</Text>
                 </View>
 
                 <View style={styles.chatBox}>

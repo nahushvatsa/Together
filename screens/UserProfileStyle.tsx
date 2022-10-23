@@ -2,13 +2,13 @@ import {StyleSheet} from 'react-native';
 import {Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
 import colors from '../config/colors';
-const primary = colors.white;
+const primary = "#fce0c7";
 const secondary = colors.black;
 const inputColor = colors.gray;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.blue,
+    backgroundColor: "#AC5E30",
     flex: 1,
     flexDirection: 'column',
   },
@@ -25,11 +25,20 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 35,
-    color: colors.blue,
-    marginTop: height * 0.01,
+    color: "#000",
+    marginTop: height * 0.05,
     fontWeight: '300',
     textAlign: 'center',
   },
+
+  titleName: {
+    fontSize: 35,
+    color: "#000",
+    marginTop: height * 0.02,
+    fontWeight: '300',
+    textAlign: 'center',
+  },
+
   subTitle: {
     fontSize: 20,
     color: secondary,
@@ -292,7 +301,7 @@ const styles = StyleSheet.create({
     width: width * 0.25,
     borderRadius: width * 0.13,
     borderWidth: width * 0.002,
-    borderColor: colors.blue,
+    borderColor: "#AC5E30",
     marginTop: height * 0.01,
     alignContent: 'center',
     alignSelf: 'center',
@@ -354,6 +363,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     height: height * 0.01,
+    padding: 5,
   },
 
   banner: {
@@ -361,6 +371,7 @@ const styles = StyleSheet.create({
     width: width * 0.35,
     backgroundColor: '#e39364',
     borderRadius: 20,
+    paddingHorizontal: 20,
   },
 
   BannerType: {
