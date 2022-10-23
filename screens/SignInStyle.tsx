@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: primary,
     marginTop: height * 0.06,
-    fontWeight: '200',
+    fontWeight: 'bold',
     textAlign: 'center',
   },
   input: {
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     color: primary,
     margin: height * 0.025,
-    fontWeight: '400',
+    fontWeight: 'bold',
     textAlign: 'center',
   },
   noAccountView: {
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: primary,
     margin: height * 0.015,
-    fontWeight: '400',
+    fontWeight: 'bold',
     textAlign: 'center',
   },
   rememberMeView: {
