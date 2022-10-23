@@ -11,6 +11,7 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 import Home from './screens/Home';
+import UserProfile from './screens/UserProfile';
 import SignIn from './screens/SignIn';
 import Discover from './screens/Discover';
 
@@ -53,6 +54,15 @@ function AuthStackScreen() {
         component={SignUp}
         options={{
           tabBarLabel: 'Sign Up',
+          headerShown: false,
+          gesturesEnabled: false,
+        }}
+      />
+      <AuthStack.Screen
+        name="User Profile"
+        component={UserProfile}
+        options={{
+          tabBarLabel: 'User Profile',
           headerShown: false,
           gesturesEnabled: false,
         }}

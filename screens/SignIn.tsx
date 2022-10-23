@@ -14,7 +14,7 @@ export default function SignIn({navigation}) {
     auth()
       .signInWithEmailAndPassword(email.toString(), password.toString())
       .then(() => {
-        navigation.navigate('Profile');
+        navigation.navigate('User Profile');
       })
       .catch(error => {
         console.log(error);
@@ -52,9 +52,7 @@ export default function SignIn({navigation}) {
             <Text style={styles.signInButtonText}>Sign In</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.forgotPwd}
-          >
+          <TouchableOpacity style={styles.forgotPwd}>
             <Text style={styles.forgotPwd}>Forgot Password?</Text>
           </TouchableOpacity>
 
