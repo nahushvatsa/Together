@@ -1,43 +1,40 @@
 import {Dimensions, Text, View} from 'react-native';
 import React from 'react';
+import {styles} from "./ChatStyle";
 
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
 export default function Chat() {
     return (
-        <View
-            style={{
-                backgroundColor: '#AC5E30',
-                flex: 1,
-                flexDirection: 'column',
-                paddingTop: height * 0.06,
-            }}>
-            <Text
-                style={{
-                    flex: 1,
-                    color: '#fce0c7',
-                    fontSize: 35,
-                    fontWeight: '600',
-                    textAlign: 'center',
-                }}>
-                Chat
-            </Text>
-            <View
-                style={{
-                    flex: 1,
-                    position: 'absolute',
-                    left: 0,
-                    marginTop: height * 0.12,
-                    backgroundColor: '#fce0c7',
-                    borderRadius: width * 0.1,
-                    height: height,
-                    width: width,
-                    paddingHorizontal: width * 0.05,
-                    paddingTop: height * 0.02,
-                    flexDirection: 'column',
-                }}
-            />
+        <View style={styles.container}>
+            <Text style={styles.title}>Chat</Text>
+            <View style={styles.overlay}>
+
+                <View style={styles.chatBox}>
+                    <View style={styles.chatIcon}></View>
+                    <View style={{marginRight:30}}><Text style={styles.name}>Sid Varanasi</Text>
+                    <Text style={styles.message}>This is a message preview!</Text>
+                </View>
+                <Text style={styles.pronouns}>(He/Him/His)</Text>
+                </View>
+
+                <View style={styles.chatBox}>
+                    <View style={styles.chatIcon}></View>
+                    <View style={{marginRight:20}}><Text style={styles.name}>Lauren Smith</Text>
+                        <Text style={styles.message}>This is a message preview!</Text>
+                    </View>
+                    <Text style={styles.pronouns}>(She/Her/Hers)</Text>
+                </View>
+
+                <View style={styles.chatBox}>
+                    <View style={styles.chatIcon}></View>
+                    <View style={{marginRight:30}}><Text style={styles.name}>Jack Harlow</Text>
+                        <Text style={styles.message}>This is a message preview!</Text>
+                    </View>
+                    <Text style={styles.pronouns}>(He/Him/His)</Text>
+                </View>
+            </View>
         </View>
     );
 }

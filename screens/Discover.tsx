@@ -1,44 +1,28 @@
+import {
+    TextInput,
+    TouchableOpacity,
+} from 'react-native';
 import {Dimensions, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-
+import {styles} from "./DiscoverStyle";
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
 
-export default function Discover() {
+export default function Discover(search: any) {
   return (
-    <View
-      style={{
-        backgroundColor: '#AC5E30',
-        flex: 1,
-        flexDirection: 'column',
-        paddingTop: height * 0.06,
-      }}>
-      <Text
-        style={{
-          flex: 1,
-          color: '#fce0c7',
-          fontSize: 35,
-          fontWeight: '600',
-          textAlign: 'center',
-        }}>
-        Discover
-      </Text>
-      <View
-        style={{
-          flex: 1,
-          position: 'absolute',
-          left: 0,
-          marginTop: height * 0.12,
-          backgroundColor: '#fce0c7',
-          borderRadius: width * 0.1,
-          height: height,
-          width: width,
-          paddingHorizontal: width * 0.05,
-          paddingTop: height * 0.02,
-          flexDirection: 'column',
-        }}
-      />
-    </View>
+        <View style={styles.container}>
+            <Text style={styles.title}>Discover Groups</Text>
+            <View style={styles.overlay}>
+                <TextInput
+                    style={styles.search}
+                    placeholder={"Search for Leaders or Communities"}
+                    value={search}>
+                </TextInput>
+                <Text style={styles.subHeadings}>Leaders</Text>
+                <View style={styles.leaders}></View>
+
+            </View>
+        </View>
   );
 }
